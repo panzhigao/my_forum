@@ -22,6 +22,15 @@ spring:
           log-slow-sql: true
           slow-sql-millis: 1000
           merge-sql: true
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
 
 logging:
-level: debug
+ level:
+   root: info
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
