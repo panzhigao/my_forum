@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import vip.panzhigao.study.entity.Article;
 import vip.panzhigao.study.service.IArticleService;
+import vip.panzhigao.study.vo.Response;
 
 /**
  *
+ * @author panzhigao
  */
 @RestController
 @RequestMapping("article")
@@ -22,8 +24,9 @@ public class ArticleController {
     private IArticleService articleService;
 
     @GetMapping("{id:^\\d+}")
-    public Article getById(@PathVariable("id")Long id){
+    public Response<Article> getById(@PathVariable("id")Long id){
         log.info("查询文章信息,id={}",id);
-        return articleService.selectById(id);
+        Article article = articleService.getAndCheckById(id);
+        return Response.success(article,"查询文章信息成功");
     }
 }

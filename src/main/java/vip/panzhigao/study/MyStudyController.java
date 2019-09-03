@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
  * Created by panzhigao on 2019/8/30.
  */
 @SpringBootApplication
-@ComponentScan({"vip.panzhigao.study.service","vip.panzhigao.study.controller"})
+@ComponentScan({"vip.panzhigao.study"})
 @MapperScan("vip.panzhigao.study.mapper")
 public class MyStudyController {
 

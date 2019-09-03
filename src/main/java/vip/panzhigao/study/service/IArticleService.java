@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.service.IService;
 import vip.panzhigao.study.entity.Article;
 
 /**
- * Created by panzhigao on 2019/8/30.
+ *
+ * @author panzhigao
+ * @date 2019/8/30
  */
 public interface IArticleService extends IService<Article>{
+    Article getAndCheckById(Long id);
 }
