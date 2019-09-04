@@ -1,7 +1,6 @@
 package vip.panzhigao.study.service.impl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import org.apache.commons.collections.BagUtils;
 import org.springframework.stereotype.Service;
 import vip.panzhigao.study.entity.Article;
 import vip.panzhigao.study.exception.BusinessException;
