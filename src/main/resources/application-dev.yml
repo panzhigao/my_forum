@@ -1,5 +1,5 @@
 server:
- port: 8080
+ port: 8083
 
 spring:
   datasource:
@@ -20,7 +20,7 @@ spring:
       filter:
         stat:
           log-slow-sql: true
-          slow-sql-millis: 1000
+          slow-sql-millis: 1
           merge-sql: true
   jackson:
     time-zone: GMT+8
